@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#76d6d5",
+                    "surface-variant": "#e4e2df",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#d4e3ff",
+                    "on-tertiary-container": "#41a5a4",
+                    "on-primary-fixed": "#041c37",
+                    "inverse-surface": "#30312f",
+                    "surface-container-high": "#eae8e5",
+                    "tertiary-container": "#003535",
+                    "primary-fixed-dim": "#b3c8eb",
+                    "on-tertiary-fixed-variant": "#004f4f",
+                    "on-secondary-fixed": "#2e1500",
+                    "surface-tint": "#4b5f7e",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#efeeeb",
+                    "on-primary-container": "#8397b8",
+                    "outline-variant": "#c4c6ce",
+                    "on-background": "#1b1c1a",
+                    "inverse-on-surface": "#f2f0ed",
+                    "secondary-fixed": "#ffdcc2",
+                    "surface-container-low": "#f5f3f0",
+                    "outline": "#74777e",
+                    "on-surface-variant": "#44474d",
+                    "surface-container-highest": "#e4e2df",
+                    "on-secondary-fixed-variant": "#6d3a00",
+                    "secondary-fixed-dim": "#ffb77a",
+                    "on-secondary-container": "#683700",
+                    "secondary": "#8f4e00",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#fbf9f6",
+                    "surface": "#fbf9f6",
+                    "tertiary": "#001e1e",
+                    "on-primary-fixed-variant": "#334865",
+                    "on-surface": "#1b1c1a",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#fbf9f6",
+                    "secondary-container": "#fe9832",
+                    "surface-dim": "#dbdad7",
+                    "primary-container": "#1a2f4b",
+                    "primary": "#021a35",
+                    "on-tertiary-fixed": "#002020",
+                    "inverse-primary": "#b3c8eb",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#93f2f2",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": [
+                            "Newsreader"
+                    ],
+                    "body": [
+                            "Manrope"
+                    ],
+                    "label": [
+                            "Manrope"
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .serif-italic { font-family: 'Newsreader', serif; font-style: italic; }
+        .glass-header {
+            background: rgba(251, 249, 246, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .resonance-gradient {
+            background: radial-gradient(circle at center, #003535 0%, #fbf9f6 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<header class="bg-[#fbf9f6]/80 dark:bg-[#021a35]/80 backdrop-blur-xl docked full-width top-0 z-50 sticky">
+<nav class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif tracking-tight text-[#021a35] dark:text-[#fbf9f6]">Dhvanik</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-[#1b1c1a] dark:text-[#f5f3f0] hover:text-[#8f4e00] transition-colors font-label text-sm uppercase tracking-widest" href="#">Our Story</a>
+<a class="text-[#1b1c1a] dark:text-[#f5f3f0] hover:text-[#8f4e00] transition-colors font-label text-sm uppercase tracking-widest" href="#">Technology</a>
+<a class="text-[#1b1c1a] dark:text-[#f5f3f0] hover:text-[#8f4e00] transition-colors font-label text-sm uppercase tracking-widest" href="#">Heritage</a>
+<a class="text-[#1b1c1a] dark:text-[#f5f3f0] hover:text-[#8f4e00] transition-colors font-label text-sm uppercase tracking-widest" href="#">Impact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-label text-sm font-semibold hover:scale-105 transition-transform duration-300">Join the Mission</button>
+</nav>
+</header>
+<main>
+<!-- Hero Section: The Call to Mission -->
+<section class="relative min-h-[716px] flex items-center px-8 pt-20 pb-32 overflow-hidden">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<div class="lg:col-span-7">
+<span class="font-label text-secondary font-bold tracking-widest uppercase text-sm mb-6 block">Building the Future of Hearing</span>
+<h1 class="font-headline text-6xl md:text-8xl leading-tight text-primary mb-8">
+                        We are looking for <span class="serif-italic">builders</span>, believers &amp; partners.
+                    </h1>
+<p class="font-body text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        Hearing is more than a sense; it is a connection to humanity. Dhvanik is redefining auditory health by merging Indian heritage with world-class engineering.
+                    </p>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-square rounded-full overflow-hidden border-[16px] border-surface-container-low relative">
+<img alt="A team of diverse engineers and clinicians collaborating in a high-tech lab setting with warm natural sunlight" class="w-full h-full object-cover" data-alt="Close-up of diverse engineers and clinicians collaborating in a high-tech lab setting with warm natural sunlight and advanced hearing device prototypes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNqWA45Bs6ZO6KAD4SsHcz2HqolfvItWI4rDDMPIcyV2inJUeCKjYaBjBhVT-eJXlR9R0rbRtZtQsUACP-5rzGm6EKY3aBN17MEweRpqx9iDP_2YiqPwnAKBteyIS-znnwcGmDLNnmw-eaczCywPk8HJ00XnIjGSGTS0zyyiP-NiJg1H_mspvteA0HrRdm3pNfUoV1q35SxydVqzQ1ureYoNGuVYWUZe5n7A5yxIuSsFYK_SjxvpXDKZYf5Oy7EPsifsIeZPHG6fE"/>
+</div>
+<!-- Technical Lockup -->
+<div class="absolute -bottom-8 -left-8 bg-surface-container-lowest p-8 rounded-xl shadow-2xl max-w-xs border border-outline-variant/20">
+<span class="font-label text-secondary text-xs font-bold uppercase mb-2 block">Phase: Global Expansion</span>
+<div class="font-headline text-3xl italic text-primary">Dhvanik Resonance Project</div>
+</div>
+</div>
+</div>
+<!-- Decorative "Resonance" background element -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] resonance-gradient opacity-10 pointer-events-none -z-10"></div>
+</section>
+<!-- Bento Grid: The Roles -->
+<section class="px-8 py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h2 class="font-headline text-5xl text-primary">Find Your <span class="serif-italic">Place</span></h2>
+<p class="font-body text-on-surface-variant mt-4 text-lg">Every contribution echoes through the lives of those we serve.</p>
+</div>
+<div class="h-px flex-grow bg-outline-variant/30 mx-12 hidden lg:block"></div>
+<span class="font-label text-secondary font-semibold uppercase tracking-tighter">7 Pathways to Mission</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- Audiologists (Large) -->
+<div class="md:col-span-2 lg:col-span-2 group relative bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">stethoscope</span>
+<h3 class="font-headline text-4xl text-primary mb-4 leading-none">Audiologists</h3>
+<p class="font-body text-on-surface-variant mb-8 text-lg">Why we need you: Your clinical expertise ensures our technology resonates with the soul of human biology.</p>
+</div>
+<button class="w-fit text-primary font-bold font-label uppercase tracking-widest text-sm flex items-center gap-2 group-hover:gap-4 transition-all">
+                            Partner with Us <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<div class="absolute bottom-0 right-0 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[12rem]">clinical_notes</span>
+</div>
+</div>
+<!-- Hardware/Embedded -->
+<div class="group relative bg-primary text-on-primary p-10 rounded-xl flex flex-col justify-between overflow-hidden">
+<div>
+<span class="material-symbols-outlined text-secondary-fixed text-4xl mb-6" data-weight="fill">memory</span>
+<h3 class="font-headline text-3xl mb-4">Hardware Engineers</h3>
+<p class="font-body text-on-primary/80 mb-6 text-sm">Building surgical-grade precision in the palm of a hand.</p>
+</div>
+<button class="w-fit bg-secondary text-on-secondary px-4 py-2 rounded-md font-label text-xs font-semibold hover:scale-105 transition-transform">Join the Team</button>
+</div>
+<!-- Software Devs -->
+<div class="group relative bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between border border-outline-variant/10">
+<div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">code</span>
+<h3 class="font-headline text-3xl text-primary mb-4">Software Devs</h3>
+<p class="font-body text-on-surface-variant mb-6 text-sm">Crafting seamless neural interfaces and intuitive mobile ecosystems.</p>
+</div>
+<button class="w-fit text-primary font-bold font-label uppercase tracking-widest text-xs flex items-center gap-2">Join the Team</button>
+</div>
+<!-- Manufacturing Partners -->
+<div class="group relative bg-tertiary text-on-tertiary p-10 rounded-xl flex flex-col justify-between overflow-hidden">
+<div>
+<span class="material-symbols-outlined text-tertiary-fixed text-4xl mb-6">precision_manufacturing</span>
+<h3 class="font-headline text-3xl mb-4 leading-tight">Manufacturing Partners</h3>
+<p class="font-body text-on-tertiary/70 mb-6 text-sm">Scaling quality across India and beyond to meet global demand.</p>
+</div>
+<button class="w-fit bg-on-tertiary text-tertiary px-4 py-2 rounded-md font-label text-xs font-semibold">Scale with Us</button>
+</div>
+<!-- Regulatory Experts -->
+<div class="group relative bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between border border-outline-variant/10">
+<div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">gavel</span>
+<h3 class="font-headline text-3xl text-primary mb-4 leading-tight">Regulatory Experts</h3>
+<p class="font-body text-on-surface-variant mb-6 text-sm">Navigating global standards to bring hearing health to every corner of the world.</p>
+</div>
+<button class="w-fit text-primary font-bold font-label uppercase tracking-widest text-xs flex items-center gap-2">Collaborate</button>
+</div>
+<!-- Investors -->
+<div class="md:col-span-2 group relative bg-secondary text-on-secondary p-10 rounded-xl flex items-center gap-10 overflow-hidden">
+<div class="relative z-10 flex-1">
+<span class="material-symbols-outlined text-surface-container-lowest text-4xl mb-6">trending_up</span>
+<h3 class="font-headline text-4xl mb-4 italic">Visionary Investors</h3>
+<p class="font-body mb-8 text-on-secondary/90 max-w-sm">We are seeking partners who value long-term generational impact over short-term returns.</p>
+<button class="w-fit bg-primary text-on-primary px-8 py-3 rounded-md font-label text-sm font-semibold hover:scale-105 transition-transform">Inquire for Series B</button>
+</div>
+<div class="hidden lg:block w-48 h-48 bg-on-secondary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-7xl opacity-50">handshake</span>
+</div>
+</div>
+<!-- Community -->
+<div class="group relative bg-surface-container-highest p-10 rounded-xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6">diversity_1</span>
+<h3 class="font-headline text-3xl text-primary mb-4">Hearing Community</h3>
+<p class="font-body text-on-surface-variant mb-6 text-sm">Join our Beta Panel and co-design the future of auditory resonance.</p>
+</div>
+<button class="w-fit text-secondary font-bold font-label uppercase tracking-widest text-xs">Join Panel</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission Manifesto (Visual Section) -->
+<section class="py-32 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
+<div class="w-full lg:w-1/2 order-2 lg:order-1">
+<div class="grid grid-cols-2 gap-4">
+<img alt="Macro shot of intricate circuit board being handled by tweezers" class="rounded-xl w-full h-64 object-cover" data-alt="Ultra macro close-up of a tiny, intricate hearing aid circuit board being handled with surgical tweezers in a sterile environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgzEA3n-wyg-JmKNLoahbOfUzqXZSaM9PYhd972m9zh-y4rQkIE0YbhUE69SL_14FupGvbpchPm09xQGuJApBt8apDqYickH_MO2irbKYwn8aHUUrVI9K6IEsBq-cTA5lVi_oqGesp__I4g0QzRZ1QWjPjQGNLUUFmFYupt43OKBJhPzb0PzBbsqG2q55u98tY4ul3cZFpA7GxxVgUswc1Y-lO8OqloSe1QOEdnOZO0L559htkXtDbm6PtC6i1ctn0MShzgmePplY"/>
+<img alt="A smiling older man listening intently to a child" class="rounded-xl w-full h-80 object-cover -mt-16" data-alt="A smiling Indian grandfather leaning in and listening intently to his granddaughter in a warm, sun-drenched courtyard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM40kkJG9GeHHHwBuasmHRAtNfaLKgZwsxRn-udXKy3A71p1Ha7Mk94RmDTA-vbEHY02ZY7ddtzv5albP0PVW1ZAvr5ATpwXVp-hRheHiPJ4qPLNWMatQyduSLfEpoZCJJZ4mfrWpKziDL9X6U9OE7BseOv8E8gZDNvoxygVSYCqbH9xueClXCfGpQagtnMzy8ajBR-ouwKGn2a1Zx4HM-hT5xzRKtq5tpnT2OuNkBRfF7ZzOnw_sAEgelkZ7Y4K1ZYdJz0J1zh1g"/>
+</div>
+</div>
+<div class="w-full lg:w-1/2 order-1 lg:order-2">
+<h2 class="font-headline text-5xl text-primary mb-8">Crafting a <span class="serif-italic">Legacy of Sound</span></h2>
+<div class="space-y-6">
+<p class="font-body text-on-surface-variant text-lg leading-relaxed">
+                            Dhvanik was born from a simple observation: Hearing aids were clinical, cold, and disconnected from the vibrant cultures of those who wore them. 
+                        </p>
+<p class="font-body text-on-surface-variant text-lg leading-relaxed">Based in India, our lab is a sanctuary where high-performance acoustics meet artisanal design. We don't just hire employees; we recruit guardians of the auditory experience.</p>
+<div class="pt-8 border-t border-outline-variant/30 flex items-center gap-6">
+<div class="flex -space-x-4">
+<div class="w-12 h-12 rounded-full border-4 border-surface overflow-hidden bg-primary-fixed">
+<img alt="Team member" class="w-full h-full object-cover" data-alt="Portrait of a young female hardware engineer with glasses in a modern lab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm5Nrr1lJxR0wz1dSacp40UFo4Gxnjl_KVjCg7dcOMj3E67_qZI6ElTknKdpwoZcDA-RIa88c7WOVeJoNXvH1apaeLRSsC908uzrCUNNScTe1PXvOBhL3WD1j0JYtwraBanvI1c6m2j7fj4U3pfmM35Pgz8BRWybRPXAIIetHqgU35pOZMjV93ETb2YBceLS-nzVyRGPtUmVTtol9GjgcMovLXtkvkMuuOM5d5PP7bS3EOEI3H3CT5r7X_p5Cg1YtwrQ1VsZVk3Fg"/>
+</div>
+<div class="w-12 h-12 rounded-full border-4 border-surface overflow-hidden bg-secondary-fixed">
+<img alt="Team member" class="w-full h-full object-cover" data-alt="Portrait of an experienced male audiologist in a white lab coat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlFkD_BVcbU_6_xdWHutxiu10LnscwQVBLehY3S9YzuVydPT1Y6jL8B05pWWnSPR8W4YiWJ9hoRcF7tCJuGyOxgap4f9NjBFTgLoZS3YX5upQh4R-1f4W7Lb8q5w_rPnOdmv4nqiVDohKTUg3GjAt4gZxeMDPQ8kB2ZZNWZ4l8esg-kWpllMywQkq6bT-JKJZnFrNcMn9ll0OXLq73hzRe37E4kgu3rkvhJG7k1RJv8W7eLd0y4b7fguTxNkJy7SzJ6ADRcATKLAQ"/>
+</div>
+<div class="w-12 h-12 rounded-full border-4 border-surface overflow-hidden bg-tertiary-fixed">
+<img alt="Team member" class="w-full h-full object-cover" data-alt="Portrait of a creative software designer in a sunlit studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-4916ERkh0mdA_Iwc_rg6jo_G3Yh880O7YxoxJVOLuTRptkFTDly6SQOafvx3A514dMZ5hIXSV81KZSqXcUk4yG9_pcDcQB3X_JSHdMGYEZbW4vs-GhGzegxMEBRGJ9NoxFrtP-BipiP5DvE9jkh6sOzFN6Q8RigjSKQ9Gy2hQr8KpJFP_0bTkd3VT41sgLapo-UQepUn15FNhHiMwyDW7SZG2NZSFHq3tLuQM9FqZBtrcweZYOEQ-QBIE51ge504XyTTNi-A-qM"/>
+</div>
+</div>
+<span class="font-label text-sm font-semibold text-secondary uppercase tracking-widest">Join 120+ Visionaries</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA: Resonant Contact -->
+<section class="mb-24 px-8">
+<div class="max-w-7xl mx-auto bg-primary rounded-[2rem] p-12 md:p-24 text-center relative overflow-hidden">
+<!-- Background decoration -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary-container rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10">
+<h2 class="font-headline text-5xl md:text-7xl text-on-primary mb-8">Ready to <span class="serif-italic">Begin</span>?</h2>
+<p class="font-body text-on-primary/70 text-xl mb-12 max-w-2xl mx-auto">Whether you're a specialist or a believer in our mission, we want to hear from you. The resonance starts with a single conversation.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<a class="bg-secondary text-on-secondary px-10 py-4 rounded-md font-label font-bold uppercase tracking-widest hover:bg-on-secondary-container transition-colors" href="mailto:careers@dhvanik.com">Apply Directly</a>
+<a class="bg-surface-container-lowest text-primary px-10 py-4 rounded-md font-label font-bold uppercase tracking-widest border border-outline-variant/20" href="#">Partnership Inquiry</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f5f3f0] dark:bg-[#001e1e] full-width py-16 px-8 mt-24">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+<div class="flex flex-col gap-6">
+<div class="text-lg font-serif italic text-[#8f4e00]">Dhvanik</div>
+<p class="font-sans Manrope text-sm tracking-wide text-[#1b1c1a]/70 dark:text-[#f5f3f0]/70 leading-relaxed">
+                    Elevating the auditory experience through the intersection of medical heritage and modern precision.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label text-xs font-bold text-primary uppercase tracking-widest">Resources</span>
+<a class="text-[#1b1c1a]/70 dark:text-[#f5f3f0]/70 hover:text-[#8f4e00] transition-colors duration-200 font-sans Manrope text-sm tracking-wide" href="#">The Lab</a>
+<a class="text-[#1b1c1a]/70 dark:text-[#f5f3f0]/70 hover:text-[#8f4e00] transition-colors duration-200 font-sans Manrope text-sm tracking-wide" href="#">Clinical Trials</a>
+<a class="text-[#1b1c1a]/70 dark:text-[#f5f3f0]/70 hover:text-[#8f4e00] transition-colors duration-200 font-sans Manrope text-sm tracking-wide" href="#">Heritage Journal</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label text-xs font-bold text-primary uppercase tracking-widest">Legal</span>
+<a class="text-[#1b1c1a]/70 dark:text-[#f5f3f0]/70 hover:text-[#8f4e00] transition-colors duration-200 font-sans Manrope text-sm tracking-wide" href="#">Privacy</a>
+<a class="text-[#1b1c1a]/70 dark:text-[#f5f3f0]/70 hover:text-[#8f4e00] transition-colors duration-200 font-sans Manrope text-sm tracking-wide" href="#">Accessibility</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label text-xs font-bold text-primary uppercase tracking-widest">Connect</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary">public</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary">mail</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-sans Manrope text-sm tracking-wide text-[#1b1c1a]/70 dark:text-[#f5f3f0]/70">© 2024 Dhvanik Hearing. Crafted in India.</div>
+<div class="flex gap-8 text-[#1b1c1a]/70 dark:text-[#f5f3f0]/70 font-sans Manrope text-sm">
+<span>ISO 13485 Certified</span>
+<span>FDA Cleared</span>
+</div>
+</div>
+</footer>
+</body></html>
