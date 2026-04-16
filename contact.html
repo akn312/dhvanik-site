@@ -162,46 +162,56 @@
 </div>
 <!-- Form Section -->
 <div class="lg:col-span-7">
-<div class="glass-panel p-8 md:p-12 rounded-[2rem] border border-outline-variant/15 relative overflow-hidden">
-<!-- Subtle ambient glow in top right -->
-<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary-container/10 blur-[100px] rounded-full"></div>
-<form class="relative space-y-8">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="space-y-2">
-<label class="text-[0.75rem] uppercase tracking-widest font-label font-bold text-secondary">Full Name</label>
-<input class="w-full bg-surface-container-highest border-transparent focus:border-primary-container focus:ring-0 rounded-xl py-4 px-6 text-on-surface transition-all placeholder:text-on-surface-variant/40" placeholder="Arjun Sharma" type="text"/>
+    <div class="glass-panel p-8 md:p-12 rounded-[2rem] border border-outline-variant/15 relative overflow-hidden">
+        <!-- Subtle ambient glow in top right -->
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary-container/10 blur-[100px] rounded-full"></div>
+        
+        <!-- Updated Form with Formspree Action -->
+        <form action="https://formspree.io" method="POST" class="relative space-y-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-2">
+                    <label class="text-[0.75rem] uppercase tracking-widest font-label font-bold text-secondary">Full Name</label>
+                    <input name="name" required class="w-full bg-surface-container-highest border-transparent focus:border-primary-container focus:ring-0 rounded-xl py-4 px-6 text-on-surface transition-all placeholder:text-on-surface-variant/40" placeholder="Arjun Sharma" type="text"/>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[0.75rem] uppercase tracking-widest font-label font-bold text-secondary">Email Address</label>
+                    <!-- "email" name is required for Formspree to track the sender -->
+                    <input name="email" required class="w-full bg-surface-container-highest border-transparent focus:border-primary-container focus:ring-0 rounded-xl py-4 px-6 text-on-surface transition-all placeholder:text-on-surface-variant/40" placeholder="arjun@resonance.in" type="email"/>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <label class="text-[0.75rem] uppercase tracking-widest font-label font-bold text-secondary">Inquiry Type</label>
+                <div class="relative">
+                    <select name="type" class="w-full bg-surface-container-highest border-transparent focus:border-primary-container focus:ring-0 rounded-xl py-4 px-6 text-on-surface appearance-none transition-all cursor-pointer">
+                        <option class="bg-surface-container-highest" value="Customer">Customer</option>
+                        <option class="bg-surface-container-highest" value="Collaborator">Collaborator</option>
+                        <option class="bg-surface-container-highest" value="Partner">Partner</option>
+                    </select>
+                    <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-primary-container">
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <label class="text-[0.75rem] uppercase tracking-widest font-label font-bold text-secondary">Your Message</label>
+                <textarea name="message" required class="w-full bg-surface-container-highest border-transparent focus:border-primary-container focus:ring-0 rounded-xl py-4 px-6 text-on-surface transition-all placeholder:text-on-surface-variant/40 resize-none" placeholder="Tell us how we can help sculpt your experience..." rows="5"></textarea>
+            </div>
+
+            <button class="w-full bg-primary-container text-on-primary py-5 rounded-xl font-headline font-extrabold text-lg flex items-center justify-center gap-3 hover:shadow-[0_0_30px_rgba(0,245,255,0.4)] transition-all active:scale-[0.98]" type="submit">
+                Submit Inquiry
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+
+            <p class="text-center text-on-surface-variant text-sm font-label">
+                Response time typically within 24 operational hours.
+            </p>
+        </form>
+    </div>
 </div>
-<div class="space-y-2">
-<label class="text-[0.75rem] uppercase tracking-widest font-label font-bold text-secondary">Email Address</label>
-<input class="w-full bg-surface-container-highest border-transparent focus:border-primary-container focus:ring-0 rounded-xl py-4 px-6 text-on-surface transition-all placeholder:text-on-surface-variant/40" placeholder="arjun@resonance.in" type="email"/>
-</div>
-</div>
-<div class="space-y-2">
-<label class="text-[0.75rem] uppercase tracking-widest font-label font-bold text-secondary">Inquiry Type</label>
-<div class="relative">
-<select class="w-full bg-surface-container-highest border-transparent focus:border-primary-container focus:ring-0 rounded-xl py-4 px-6 text-on-surface appearance-none transition-all cursor-pointer">
-<option class="bg-surface-container-highest" value="Customer">Customer</option>
-<option class="bg-surface-container-highest" value="Collaborator">Collaborator</option>
-<option class="bg-surface-container-highest" value="Partner">Partner</option>
-</select>
-<div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-primary-container">
-<span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
-</div>
-</div>
-</div>
-<div class="space-y-2">
-<label class="text-[0.75rem] uppercase tracking-widest font-label font-bold text-secondary">Your Message</label>
-<textarea class="w-full bg-surface-container-highest border-transparent focus:border-primary-container focus:ring-0 rounded-xl py-4 px-6 text-on-surface transition-all placeholder:text-on-surface-variant/40 resize-none" placeholder="Tell us how we can help sculpt your experience..." rows="5"></textarea>
-</div>
-<button class="w-full bg-primary-container text-on-primary py-5 rounded-xl font-headline font-extrabold text-lg flex items-center justify-center gap-3 hover:shadow-[0_0_30px_rgba(0,245,255,0.4)] transition-all active:scale-[0.98]" type="submit">
-                            Submit Inquiry
-                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-</button>
-<p class="text-center text-on-surface-variant text-sm font-label">
-                            Response time typically within 24 operational hours.
-                        </p>
-</form>
-</div>
+
 <!-- Secondary Visual Card -->
 <div class="mt-8 p-8 rounded-[2rem] bg-surface-container-low border border-outline-variant/10 flex flex-col md:flex-row items-center justify-between gap-6">
 <div class="flex items-center gap-6">
