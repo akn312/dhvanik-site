@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-surface": "#d6e3ff",
+                  "secondary-fixed": "#ffdfa0",
+                  "on-tertiary-fixed-variant": "#004d63",
+                  "tertiary": "#f4fbff",
+                  "surface-container-high": "#1c2a41",
+                  "primary-container": "#00f5ff",
+                  "outline": "#849495",
+                  "on-primary-container": "#006c71",
+                  "inverse-on-surface": "#233148",
+                  "surface-container": "#112036",
+                  "surface": "#041329",
+                  "error-container": "#93000a",
+                  "on-primary-fixed": "#002021",
+                  "surface-dim": "#041329",
+                  "surface-container-lowest": "#010e24",
+                  "on-error-container": "#ffdad6",
+                  "on-secondary-fixed-variant": "#5c4300",
+                  "on-secondary-container": "#6d5000",
+                  "secondary-fixed-dim": "#fbbc00",
+                  "inverse-primary": "#00696e",
+                  "tertiary-fixed-dim": "#6cd3fc",
+                  "secondary-container": "#ffbf00",
+                  "outline-variant": "#3a494a",
+                  "surface-tint": "#00dce5",
+                  "on-tertiary-fixed": "#001f2a",
+                  "secondary": "#ffe2ab",
+                  "on-secondary": "#402d00",
+                  "surface-variant": "#27354c",
+                  "surface-container-highest": "#27354c",
+                  "primary-fixed": "#63f7ff",
+                  "on-background": "#d6e3ff",
+                  "surface-container-low": "#0d1c32",
+                  "on-primary-fixed-variant": "#004f53",
+                  "background": "#041329",
+                  "surface-bright": "#2c3951",
+                  "on-primary": "#003739",
+                  "inverse-surface": "#d6e3ff",
+                  "error": "#ffb4ab",
+                  "on-surface-variant": "#b9caca",
+                  "tertiary-fixed": "#bce9ff",
+                  "on-tertiary": "#003545",
+                  "on-error": "#690005",
+                  "primary-fixed-dim": "#00dce5",
+                  "primary": "#e9feff",
+                  "on-tertiary-container": "#006987",
+                  "tertiary-container": "#aee5ff",
+                  "on-secondary-fixed": "#261a00"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Manrope"],
+                  "body": ["Inter"],
+                  "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-card {
+      background: rgba(13, 28, 50, 0.4);
+      backdrop-filter: blur(20px);
+    }
+    .acoustic-gradient {
+      background: radial-gradient(circle at top right, rgba(0, 245, 255, 0.1), transparent);
+    }
+    .topo-line {
+      stroke: #00f5ff;
+      stroke-width: 1;
+      opacity: 0.3;
+      fill: none;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#0d1c32]/80 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-full mx-auto border-b border-white/5">
+    <!-- Brand -->
+    <div class="text-2xl font-black text-[#e9feff] tracking-tight font-headline">Dhvanik</div>
+    
+    <!-- Navigation Links -->
+    <div class="hidden md:flex items-center gap-8 font-headline font-bold text-sm tracking-wide uppercase">
+        <a class="text-[#d6e3ff] opacity-70 hover:opacity-100 hover:text-[#00F5FF] transition-all duration-300" href="index.html">The Vision</a>
+        <a class="text-[#00F5FF] border-b-2 border-[#00F5FF] pb-1 transition-all duration-300" href="hearing.html">Hearing Profile</a>
+        <a class="text-[#d6e3ff] opacity-70 hover:opacity-100 hover:text-[#00F5FF] transition-all duration-300" href="technology.html">Technology</a>
+        <a class="text-[#d6e3ff] opacity-70 hover:opacity-100 hover:text-[#00F5FF] transition-all duration-300" href="mission.html">Mission</a>
+    </div>
+
+    <!-- Actions -->
+    <div class="flex items-center gap-4">
+        <a href="contact.html" class="text-[#00F5FF] font-headline font-bold text-sm tracking-wide uppercase scale-95 transition-transform duration-200 hover:scale-100">Support</a>
+    </div>
+</nav>
+
+<!-- Spacer to prevent content from starting under the fixed nav -->
+<div class="h-20"></div>
+
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Hero Header -->
+<header class="mb-24 text-center md:text-left max-w-3xl">
+<span class="inline-block px-3 py-1 mb-6 rounded-full bg-surface-container-high border border-outline-variant/15 text-primary-container text-xs font-label tracking-widest uppercase">Stealth Phase: Beta 0.1</span>
+<h1 class="text-6xl md:text-8xl font-black font-headline tracking-tighter leading-[0.9] text-primary mb-8">
+        Redefining the <br/><span class="text-primary-container">Landscape of Sound.</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+        Your auditory journey is unique. We are crafting a precision-tuned hearing sanctuary that evolves with your life. Coming soon to select participants.
+      </p>
+</header>
+<!-- Concept Visualizer: Landscape of Sound -->
+<section class="mb-32">
+<div class="relative w-full aspect-[21/9] rounded-3xl overflow-hidden bg-surface-container-lowest border border-outline-variant/10 group">
+<!-- Background Texture -->
+<div class="absolute inset-0 opacity-20" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIpCpDXwd5lokEUmNlwtjbL0sRQ6De1mR2i3iN4ZALvJWCLm_kg4tlM7BhF1nTWpNpwzS8YZuL7Raixw46cpcc92HTs7pXjg13PT6M7x473koLoaKxQZcp5PpskVlVGUofTiFkPEfqBX_GzCfh-3RImpHSrSp6x90j2fZy12eXGZ_jLXtGH4wE6fPmVHrMj4JapDU6Tn_MWIVyx4mxoUr98OHLy6TotSGG51fW2lvcYCjHnCEcan2Im0YLxI8FbBdX2FIi2OhxQeo');"></div>
+<!-- Artistic Topographic Map (Placeholder for SVG Concept) -->
+<div class="absolute inset-0 flex items-center justify-center">
+<svg class="w-full h-full" viewbox="0 0 800 400">
+<path class="topo-line" d="M0,200 Q100,150 200,220 T400,180 T600,250 T800,150"></path>
+<path class="topo-line" d="M0,220 Q150,180 300,250 T500,210 T800,280" style="opacity: 0.15; transform: translateY(20px);"></path>
+<path class="topo-line" d="M0,180 Q120,120 250,190 T450,150 T800,120" style="opacity: 0.1; transform: translateY(-30px);"></path>
+<!-- Glowing Node -->
+<circle class="animate-pulse" cx="400" cy="180" fill="#00f5ff" r="4"></circle>
+<circle class="opacity-30" cx="400" cy="180" fill="none" r="12" stroke="#00f5ff" stroke-width="1"></circle>
+</svg>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<!-- UI Overlays for Authenticity -->
+<div class="absolute bottom-10 left-10 p-6 glass-card rounded-2xl border border-outline-variant/20 max-w-sm">
+<h3 class="text-secondary font-headline font-bold text-lg mb-2">Resonance Mapping</h3>
+<p class="text-on-surface/70 text-sm leading-relaxed italic">"Converting traditional decibel markers into a fluid topography of human connection."</p>
+</div>
+<div class="absolute top-10 right-10 flex flex-col gap-3">
+<div class="flex items-center gap-3 px-4 py-2 glass-card rounded-full border border-outline-variant/10">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
+<span class="text-xs font-label uppercase tracking-widest text-on-surface">Frequency Syncing</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-2 glass-card rounded-full border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container text-sm">waves</span>
+<span class="text-xs font-label uppercase tracking-widest text-on-surface">Precision: 0.01ms</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Roadmap: What to Expect -->
+<section class="mb-32">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<h2 class="text-4xl font-black font-headline tracking-tight text-primary mb-2">The Roadmap</h2>
+<p class="text-on-surface-variant text-lg">A phased approach to auditory transcendence.</p>
+</div>
+<div class="h-px flex-1 bg-outline-variant/20 mx-8 hidden md:block"></div>
+<div class="text-primary-container font-headline font-bold uppercase tracking-widest text-sm">2024 Release Path</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Stage 1: Discovery -->
+<div class="relative p-8 rounded-3xl bg-surface-container-low border-none overflow-hidden acoustic-gradient group hover:bg-surface-container transition-colors duration-500">
+<div class="mb-12">
+<span class="text-4xl font-black font-headline text-primary-container/20 group-hover:text-primary-container transition-colors duration-500">01</span>
+</div>
+<h3 class="text-2xl font-black font-headline text-primary mb-4">Discovery</h3>
+<p class="text-on-surface/80 leading-relaxed mb-6">
+            Establishing your baseline soundscape through neural response analysis and environmental sampling.
+          </p>
+<div class="flex items-center gap-2 text-secondary text-xs font-label uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">sensors</span>
+            Baseline Scan
+          </div>
+</div>
+<!-- Stage 2: Personalization -->
+<div class="relative p-8 rounded-3xl bg-surface-container-low border-none overflow-hidden acoustic-gradient group hover:bg-surface-container transition-colors duration-500">
+<div class="mb-12">
+<span class="text-4xl font-black font-headline text-primary-container/20 group-hover:text-primary-container transition-colors duration-500">02</span>
+</div>
+<h3 class="text-2xl font-black font-headline text-primary mb-4">Personalization</h3>
+<p class="text-on-surface/80 leading-relaxed mb-6">
+            Real-time tuning that adapts to the roar of a street market or the whisper of a library with zero friction.
+          </p>
+<div class="flex items-center gap-2 text-secondary text-xs font-label uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">tune</span>
+            Dynamic Calibration
+          </div>
+</div>
+<!-- Stage 3: Vitality -->
+<div class="relative p-8 rounded-3xl bg-surface-container-low border-none overflow-hidden acoustic-gradient group hover:bg-surface-container transition-colors duration-500">
+<div class="mb-12">
+<span class="text-4xl font-black font-headline text-primary-container/20 group-hover:text-primary-container transition-colors duration-500">03</span>
+</div>
+<h3 class="text-2xl font-black font-headline text-primary mb-4">Vitality</h3>
+<p class="text-on-surface/80 leading-relaxed mb-6">
+            Long-term auditory health tracking with an integrated "Vitality Score" to monitor your sensory health over decades.
+          </p>
+<div class="flex items-center gap-2 text-secondary text-xs font-label uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">vital_signs</span>
+            Decade-Scale Health
+          </div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-12 px-8 bg-[#041329] border-t border-[#3a494a]/15">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="flex flex-col gap-2">
+<p class="font-manrope text-xs tracking-wider uppercase opacity-50 text-[#00F5FF]">
+          © 2024 Dhvanik. Resonant Precision in every frequency.
+        </p>
+</div>
+<div class="flex gap-8 font-manrope text-xs tracking-wider uppercase">
+<a class="text-[#d6e3ff] hover:text-[#ffe2ab] transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="text-[#d6e3ff] hover:text-[#ffe2ab] transition-colors duration-300" href="#">Terms of Service</a>
+<a class="text-[#d6e3ff] hover:text-[#ffe2ab] transition-colors duration-300" href="#">Research Papers</a>
+<a class="text-[#d6e3ff] hover:text-[#ffe2ab] transition-colors duration-300" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

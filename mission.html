@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#6cd3fc",
+                    "primary-fixed": "#63f7ff",
+                    "surface-bright": "#2c3951",
+                    "on-tertiary-fixed": "#001f2a",
+                    "inverse-surface": "#d6e3ff",
+                    "error": "#ffb4ab",
+                    "tertiary": "#f4fbff",
+                    "on-error": "#690005",
+                    "primary-fixed-dim": "#00dce5",
+                    "secondary-fixed": "#ffdfa0",
+                    "on-tertiary-fixed-variant": "#004d63",
+                    "on-secondary": "#402d00",
+                    "surface-container-high": "#1c2a41",
+                    "primary-container": "#00f5ff",
+                    "error-container": "#93000a",
+                    "surface": "#041329",
+                    "surface-tint": "#00dce5",
+                    "on-primary": "#003739",
+                    "on-surface-variant": "#b9caca",
+                    "surface-container-lowest": "#010e24",
+                    "secondary-container": "#ffbf00",
+                    "surface-dim": "#041329",
+                    "on-primary-container": "#006c71",
+                    "outline": "#849495",
+                    "on-secondary-fixed": "#261a00",
+                    "on-tertiary": "#003545",
+                    "inverse-primary": "#00696e",
+                    "outline-variant": "#3a494a",
+                    "on-secondary-container": "#6d5000",
+                    "surface-container-highest": "#27354c",
+                    "inverse-on-surface": "#233148",
+                    "tertiary-container": "#aee5ff",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed": "#002021",
+                    "on-background": "#d6e3ff",
+                    "secondary-fixed-dim": "#fbbc00",
+                    "primary": "#e9feff",
+                    "surface-variant": "#27354c",
+                    "surface-container-low": "#0d1c32",
+                    "on-primary-fixed-variant": "#004f53",
+                    "on-surface": "#d6e3ff",
+                    "on-tertiary-container": "#006987",
+                    "on-secondary-fixed-variant": "#5c4300",
+                    "secondary": "#ffe2ab",
+                    "surface-container": "#112036",
+                    "tertiary-fixed": "#bce9ff",
+                    "background": "#041329"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        background: rgba(44, 57, 81, 0.4);
+        backdrop-filter: blur(20px);
+      }
+      .glow-hover:hover {
+        box-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
+      }
+      .acoustic-card {
+        position: relative;
+        overflow: hidden;
+      }
+      .acoustic-card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 120px;
+        height: 120px;
+        background: radial-gradient(circle at top right, rgba(0, 245, 255, 0.1), transparent 70%);
+        pointer-events: none;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#041329]/80 backdrop-blur-xl shadow-[0_12px_40px_rgba(214,227,255,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<a class="text-2xl font-bold tracking-tighter text-[#e9feff]" style="font-family:Manrope,sans-serif" href="index.html">Dhvanik</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-medium text-sm text-[#d6e3ff]/70 hover:text-[#00f5ff] transition-colors duration-300" href="index.html">The Vision</a>
+<a class="font-medium text-sm text-[#d6e3ff]/70 hover:text-[#00f5ff] transition-colors duration-300" href="technology.html">Technology</a>
+<a class="font-medium text-sm text-[#d6e3ff]/70 hover:text-[#00f5ff] transition-colors duration-300" href="hearing.html">Hearing Profile</a>
+<a class="font-medium text-sm text-[#00f5ff] border-b-2 border-[#00f5ff] pb-1 transition-colors duration-300" href="mission.html">Join the Mission</a>
+<a class="font-medium text-sm text-[#d6e3ff]/70 hover:text-[#00f5ff] transition-colors duration-300" href="contact.html">Contact</a>
+</div>
+<button class="md:hidden text-[#d6e3ff]" onclick="document.getElementById('mob-menu').classList.toggle('hidden')"><span class="material-symbols-outlined">menu</span></button>
+<a href="contact.html" class="hidden md:block bg-primary-container text-on-primary px-6 py-2 rounded-lg text-sm font-bold tracking-tight hover:shadow-[0_0_15px_rgba(0,245,255,0.3)] transition-all">Connect</a>
+</div>
+<div id="mob-menu" class="hidden md:hidden bg-[#041329]/95 border-t border-outline-variant/20 px-8 py-4 flex flex-col gap-4">
+<a class="text-sm font-medium text-[#d6e3ff]/70 hover:text-[#00f5ff]" href="index.html">The Vision</a>
+<a class="text-sm font-medium text-[#d6e3ff]/70 hover:text-[#00f5ff]" href="technology.html">Technology</a>
+<a class="text-sm font-medium text-[#d6e3ff]/70 hover:text-[#00f5ff]" href="hearing.html">Hearing Profile</a>
+<a class="text-sm font-medium text-[#d6e3ff]/70 hover:text-[#00f5ff]" href="mission.html">Join the Mission</a>
+<a class="text-sm font-medium text-[#d6e3ff]/70 hover:text-[#00f5ff]" href="contact.html">Contact</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-48 pb-32 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto relative z-10">
+<h1 class="font-headline text-[3.5rem] leading-[1.1] font-extrabold tracking-tight mb-8 max-w-4xl text-primary">
+                Solve the Sound of India.
+            </h1>
+<p class="font-body text-xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">We are building the first intelligent hearing ecosystem designed specifically for the Indian auditory landscape. We are looking for <span class="text-secondary italic">pioneers</span> to redefine how India hears.</p>
+</div>
+<!-- Background Tech Texture -->
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+<div class="w-full h-full bg-[url('https://www.transparenttextures.com/patterns/circuit-board.png')] opacity-10"></div>
+<div class="absolute inset-0 bg-gradient-to-l from-primary-container/20 to-transparent"></div>
+</div>
+</header>
+<!-- Problem Section: Mapping the Indian Auditory Landscape -->
+<section class="py-32 px-8">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline text-4xl font-extrabold text-primary mb-8 tracking-tight">Mapping the Indian Auditory Landscape</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container" data-icon="traffic">traffic</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Acoustic Signatures: Traffic</h4>
+<p class="text-on-surface-variant leading-relaxed">Standard hearing aids fail in the chaos of Indian roads. We isolate speech frequencies from high-decibel honking and engine roar.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container" data-icon="groups">groups</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Density: Crowded Spaces</h4>
+<p class="text-on-surface-variant leading-relaxed">From local markets to festivals, our spatial audio tech maps the directionality of sound in hyper-dense social environments.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container" data-icon="translate">translate</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Linguistic Phonetics</h4>
+<p class="text-on-surface-variant leading-relaxed">Phonetic nuances of Indic languages require specific spectral tuning. We process sound for clarity across 22 major languages.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden aspect-square md:aspect-auto md:h-[600px] bg-surface-container-low border border-outline-variant/10">
+<img alt="Indian Market Soundscape" class="w-full h-full object-cover opacity-60 mix-blend-luminosity" data-alt="Vibrant, busy Indian market street scene at dusk with warm glowing lights, blurred motion of people, and cinematic atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4zV-lnCI8kVKBs20FiztgyEfst45UK8ShNpvYLE3x4gE35IFQYFhM-stm3lRKzNlgSt9yszyEGDJWHCUIqqNMWHLMklRUbW82PI96SqvdkxVQ7GXmJ4fExvlnRdhbAVHgUHZoS3pNjb0RbF2wzbYMbANGXu9tM2PSco6lRZyaAVTmsggRqbHSIXfgatT-Us4Zt3RgvM86_6DjG5jNqrl2l5h8FaMZJIQmLsxmTWMeTOHnH-A-AvEPAzmvT1l0xN_wAu2T7b5sCV4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<!-- Abstract Soundwave Overlay -->
+<div class="absolute bottom-10 left-10 right-10 h-32 flex items-end justify-between gap-1">
+<div class="w-1 bg-secondary-container h-[20%] rounded-full opacity-60"></div>
+<div class="w-1 bg-secondary-container h-[40%] rounded-full opacity-70"></div>
+<div class="w-1 bg-secondary-container h-[80%] rounded-full"></div>
+<div class="w-1 bg-primary-container h-[100%] rounded-full"></div>
+<div class="w-1 bg-primary-container h-[60%] rounded-full"></div>
+<div class="w-1 bg-secondary-container h-[90%] rounded-full"></div>
+<div class="w-1 bg-secondary-container h-[30%] rounded-full opacity-60"></div>
+<div class="w-1 bg-secondary-container h-[50%] rounded-full opacity-80"></div>
+<div class="w-1 bg-primary-container h-[70%] rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Join the Mission Form Section -->
+<section class="py-32 px-8 bg-surface-container-lowest" id="join-form">
+<div class="max-w-4xl mx-auto text-center mb-16">
+<h2 class="font-headline text-4xl font-extrabold text-primary mb-4">Collaborate with Us</h2>
+<p class="text-on-surface-variant">Share your vision and expertise. Let's explore how we can redesign sound together.</p>
+</div>
+<div class="max-w-3xl mx-auto glass-effect p-12 rounded-2xl border border-outline-variant/10">
+<a href="contact.html" class="inline-block text-center w-full bg-primary-container text-on-primary font-bold py-5 rounded-xl hover:bg-primary-fixed-dim transition-all glow-hover uppercase tracking-widest text-sm">
+  Connect with the Mission
+</a>
+</div>
+</section>
+<!-- Closing Statement -->
+<section class="py-32 px-8 text-center relative overflow-hidden">
+<div class="max-w-4xl mx-auto relative z-10">
+<h2 class="font-headline text-3xl md:text-5xl font-bold text-primary mb-8 leading-tight">
+                Let’s build a future where every Indian can hear the <span class="text-secondary">"nice parts"</span> of life clearly.
+            </h2>
+<div class="w-24 h-1 bg-gradient-to-r from-primary-container to-secondary mx-auto rounded-full"></div>
+</div>
+<!-- Decorative sound wave circles -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-primary-container/5 rounded-full pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-secondary/5 rounded-full pointer-events-none"></div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-12 bg-[#041329] border-t border-[#3a494a]/15 font-['Inter'] text-[0.75rem] font-light">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-screen-2xl mx-auto">
+<div class="mb-6 md:mb-0">
+<div class="text-lg font-bold text-[#e9feff] mb-2">Dhvanik</div>
+<p class="text-[#d6e3ff]/40">© 2024 Dhvanik. Resonant Precision.</p>
+</div>
+<div class="flex space-x-8">
+<a class="text-[#d6e3ff]/40 hover:text-[#ffe2ab] transition-colors ease-out" href="javascript:void(0)">Privacy Policy</a>
+<a class="text-[#d6e3ff]/40 hover:text-[#ffe2ab] transition-colors ease-out" href="javascript:void(0)">Terms of Service</a>
+<a class="text-[#d6e3ff]/40 hover:text-[#ffe2ab] transition-colors ease-out" href="javascript:void(0)">Accessibility</a>
+<a class="text-[#d6e3ff]/40 hover:text-[#ffe2ab] transition-colors ease-out" href="contact.html">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>
